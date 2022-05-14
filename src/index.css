@@ -1,13 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  max-width: 100%;
+}
+
+.btn {
+  @apply border-2 border-white py-2 px-10 inline-block text-white;
+}
+
+.heading {
+  @apply font-bold text-white text-3xl md:text-4xl lg:text-6xl capitalize text-center mb-5;
+}
+
+p,
+li {
+  line-height: 1.8;
+}
+
+.loading-spinner {
+  @apply flex flex-col items-center justify-center h-screen;
+}
+
+.loading-spinner article {
+  @apply w-20 h-20 border-4 border-white opacity-50 border-t-green-500 rounded-full animate-spin;
+}
+
+.loading-spinner p {
+  @apply text-white opacity-75 mt-2 text-center;
+}
+
+.max-width {
+  @apply px-5 lg:max-w-4xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
+}
+
+.showcase {
+  background: url("./images/hero.jpg") no-repeat center/cover;
+  height: calc(110vh - 0.1px);
+}
+
+.showcase .overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: calc(110vh - 0.1px);
+}
+
+.navbar {
+  position: absolute;
+  top: 6rem;
+  left: -1000vw;
+  right: 1.25rem;
+  background-color: transparent;
+  color: #fff;
+  z-index: -999;
+  padding: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.open {
+  top: 6rem;
+  left: 1.25rem;
+  background-color: #0f0f0fee;
+  z-index: 10;
+}
+
+.navbar ul li {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.articles {
+  background-color: #0f0f0f;
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: auto;
+    padding: 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar ul li {
+    margin: 0 1rem 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: capitalize;
+    letter-spacing: 0;
+  }
 }
