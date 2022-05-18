@@ -9,7 +9,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background: linear-gradient(180deg, #0f0f0f 0%, #262626 100%) center/cover;
 }
 
 img {
