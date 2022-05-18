@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import CheckOnlineStatus from "./components/CheckOnlineStatus"
 import Header from "./components/Header"
 import {
   Homepage,
@@ -10,11 +11,13 @@ import {
   SingleDragon,
   Landpads,
   SingleLandpad,
+  Roadster,
 } from "./pages"
 
 export default function App() {
   return (
     <>
+      {/* <CheckOnlineStatus /> */}
       <BrowserRouter>
         <Header />
         <Routes>
@@ -27,6 +30,7 @@ export default function App() {
           <Route path="/dragons/:id" element={<SingleDragon />}></Route>
           <Route path="/landpads" element={<Landpads />}></Route>
           <Route path="/landpads/:id" element={<SingleLandpad />}></Route>
+          <Route path="/roadster" element={<Roadster />}></Route>
         </Routes>
       </BrowserRouter>
     </>
