@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import LoadingState from "../components/LoadingState"
 
 export default function Capsules() {
   const [capsules, setCapsules] = useState(null)
@@ -16,10 +17,7 @@ export default function Capsules() {
   return (
     <>
       {!capsules ? (
-        <div className="loading-spinner">
-          <article></article>
-          <p>The spinny thingy means it's working</p>
-        </div>
+        <LoadingState />
       ) : (
         <section className="pages-showcase">
           <div className="overlay py-20 lg:pt-32">
