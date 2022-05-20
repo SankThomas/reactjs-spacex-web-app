@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import LoadingState from "../components/LoadingState"
 
 export default function Crew() {
   const [crew, setCrew] = useState(null)
@@ -17,10 +18,7 @@ export default function Crew() {
   return (
     <>
       {!crew ? (
-        <div className="loading-spinner">
-          <article></article>
-          <p>The spinny thingy means it's working</p>
-        </div>
+        <LoadingState />
       ) : (
         <section className="pages-showcase">
           <div className="overlay py-20 lg:pt-32">
@@ -34,7 +32,7 @@ export default function Crew() {
                       src={image}
                       alt={name}
                       loading="lazy"
-                      className="h-full object-cover"
+                      className="md:h-64 lg:h-80 w-full object-top object-cover"
                     />
                     <div className="absolute bottom-3 left-3">
                       <h2 className="text-white font-bold text-xl">{name}</h2>
