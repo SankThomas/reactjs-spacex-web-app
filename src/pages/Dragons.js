@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import LoadingState from "../components/LoadingState"
 
 export default function Dragons() {
   const [dragons, setDragons] = useState(null)
@@ -17,10 +18,7 @@ export default function Dragons() {
   return (
     <>
       {!dragons ? (
-        <div className="loading-spinner">
-          <article></article>
-          <p>The spinny thingy means it's working</p>
-        </div>
+        <LoadingState />
       ) : (
         <section className="pages-showcase">
           <div className="overlay py-20 lg:pt-32">
@@ -34,7 +32,7 @@ export default function Dragons() {
                       src={flickr_images[0]}
                       alt={name}
                       loading="lazy"
-                      className="h-full object-cover"
+                      className="md:h-52 lg:h-80 h-full object-cover object-fit w-full"
                     />
                     <div className="p-5">
                       <h2 className="text-white font-bold text-xl">{name}</h2>
