@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import LoadingState from "../components/LoadingState"
 
 export default function Homepage() {
   const [items, setItems] = useState(null)
@@ -24,7 +25,9 @@ export default function Homepage() {
             </span>
           </h1>
 
-          {items && (
+          {!items ? (
+            <LoadingState />
+          ) : (
             <>
               <div className="flex flex-col justify-center md:flex-row">
                 <article className="mt-5 mb-5 sm:mt-0 md:mr-10 lg:mr-20">
