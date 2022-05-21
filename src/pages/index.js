@@ -7,6 +7,7 @@ import Dragons from "./Dragons"
 import SingleDragon from "./SingleDragon"
 import Landpads from "./Landpads"
 import SingleLandpad from "./SingleLandpad"
+import Roadster from "./Roadster"
 
 export {
   Homepage,
@@ -18,4 +19,5 @@ export {
   SingleDragon,
   Landpads,
   SingleLandpad,
+  Roadster,
 }
