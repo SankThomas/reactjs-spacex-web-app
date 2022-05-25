@@ -24,6 +24,10 @@ img {
   @apply font-bold text-white text-3xl md:text-4xl lg:text-6xl capitalize text-center mb-5;
 }
 
+.heading-inner {
+  @apply font-bold text-white text-3xl md:text-4xl lg:text-6xl capitalize mb-5;
+}
+
 p,
 li {
   line-height: 1.8;
