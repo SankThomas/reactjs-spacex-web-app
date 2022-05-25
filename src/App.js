@@ -11,7 +11,10 @@ import {
   SingleDragon,
   Landpads,
   SingleLandpad,
+  Launches,
   Roadster,
+  // Error,
+  SingleLaunches,
 } from "./pages"
 
 export default function App() {
@@ -30,7 +33,11 @@ export default function App() {
           <Route path="/dragons/:id" element={<SingleDragon />}></Route>
           <Route path="/landpads" element={<Landpads />}></Route>
           <Route path="/landpads/:id" element={<SingleLandpad />}></Route>
+          <Route path="/launches" element={<Launches />}></Route>
+          <Route path="/launches/:id" element={<SingleLaunches />}></Route>
           <Route path="/roadster" element={<Roadster />}></Route>
+          {/* Reroute error links back to the homepage */}
+          <Route path="*" element={<Homepage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
