@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
+import LoadingState from "../components/LoadingState"
 
 export default function SingleCrew() {
   const [singleCrew, setSingleCrew] = useState(null)
@@ -18,10 +19,7 @@ export default function SingleCrew() {
   return (
     <>
       {!singleCrew ? (
-        <div className="loading-spinner">
-          <article></article>
-          <p>The spinny thingy means it's working</p>
-        </div>
+        <LoadingState />
       ) : (
         <>
           <section className="max-width py-28 lg:pt-40 flex flex-col justify-center md:grid md:grid-cols-2 md:gap-10">
