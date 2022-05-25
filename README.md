@@ -1,6 +1,6 @@
 # SpaceX Informational Web App
 
-<!-- Add home image here -->
+![spacex-informational-web-app-preview-built-in-reactjs](./preview.png)
 
 Built in ReactJs, this web app contains all the information about SpaceX that is fetched continually from `https://api.spacexdata.com`.
 
