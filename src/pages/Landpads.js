@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import LoadingState from "../components/LoadingState"
 
 export default function Landpads() {
   const [landpads, setLandpads] = useState(null)
@@ -17,21 +18,22 @@ export default function Landpads() {
   return (
     <>
       {!landpads ? (
-        <div className="loading-spinner">
-          <article></article>
-          <p>The spinny thingy means it's working</p>
-        </div>
+        <LoadingState />
       ) : (
         <section className="pages-showcase">
           <div className="overlay py-20 pt-32">
             <h1 className="heading">Landpads</h1>
 
-            <div className="max-width grid grid-cols 1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10">
+            <div className="max-width grid grid-cols 1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
               {landpads.map(
                 ({ images: { large }, type, full_name, details, id }) => (
                   <Link to={`/landpads/${id}`} key={id}>
                     <article className="articles">
-                      <img src={large} alt={full_name} className="h-52" />
+                      <img
+                        src={large}
+                        alt={full_name}
+                        className="h-52 w-full"
+                      />
                       <div className="p-5">
                         <h2 className="text-white font-bold text-xl">
                           <span className="opacity-75 text-lg font-normal">
