@@ -8,6 +8,9 @@ import SingleDragon from "./SingleDragon"
 import Landpads from "./Landpads"
 import SingleLandpad from "./SingleLandpad"
 import Roadster from "./Roadster"
+import Error from "./Error"
+import Launches from "./Launches"
+import SingleLaunches from "./SingleLaunches"
 
 export {
   Homepage,
@@ -20,4 +23,7 @@ export {
   Landpads,
   SingleLandpad,
   Roadster,
+  Error,
+  Launches,
+  SingleLaunches,
 }
