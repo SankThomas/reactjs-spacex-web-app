@@ -27,9 +27,7 @@ export default function SingleCrew() {
               <img src={singleCrew.image} alt={singleCrew.name} />
             </article>
             <article>
-              <h1 className="font-bold text-white text-3xl md:text-4xl lg:text-6xl capitalize mb-5">
-                {singleCrew.name}
-              </h1>
+              <h1 className="heading-inner">{singleCrew.name}</h1>
               <h2 className="font-bold text-white text-xl mb-3">Details</h2>
               <ul className="text-white">
                 <li className="mb-1 opacity-75">
