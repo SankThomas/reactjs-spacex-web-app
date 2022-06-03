@@ -41,12 +41,12 @@ export default function SingleShip() {
             <article className="my-5">
               <ul className="text-white opacity-75 text-sm lg:text-base">
                 <li>
-                  {!singleShip.mass_lg
+                  {!singleShip.mass_kg
                     ? "Mass in kgs not indicated"
                     : `${singleShip.mass_kg.toLocaleString()} kg`}{" "}
                 </li>
                 <li>
-                  {!singleShip.mass_lg
+                  {!singleShip.mass_lbs
                     ? "Mass in pounds not indicated"
                     : `${singleShip.mass_lbs.toLocaleString()} lbs`}{" "}
                 </li>
