@@ -11,6 +11,14 @@ import Roadster from "./Roadster"
 import Error from "./Error"
 import Launches from "./Launches"
 import SingleLaunches from "./SingleLaunches"
+import Launchpads from "./Launchpads"
+import SingleLaunchpad from "./SingleLaunchpad"
+import Payloads from "./Payloads"
+import Rockets from "./Rockets"
+import SingleRocket from "./SingleRocket"
+import Ships from "./Ships"
+import SingleShip from "./SingleShip"
+import Starlink from "./Starlink"
 
 export {
   Homepage,
@@ -26,4 +34,12 @@ export {
   Error,
   Launches,
   SingleLaunches,
+  Launchpads,
+  SingleLaunchpad,
+  Payloads,
+  Rockets,
+  SingleRocket,
+  Ships,
+  SingleShip,
+  Starlink,
 }
