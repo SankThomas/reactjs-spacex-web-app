@@ -51,7 +51,7 @@ li {
 
 .showcase {
   background: url("./images/hero.jpg") no-repeat center/cover;
-  height: calc(110vh - 0.1px);
+  height: calc(150vh - 0.1px);
 }
 
 .showcase .overlay {
@@ -60,7 +60,7 @@ li {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.1);
-  height: calc(110vh - 0.1px);
+  height: calc(150vh - 0.1px);
 }
 
 .navbar {
@@ -90,6 +90,20 @@ li {
 
 .articles {
   background-color: #0f0f0f;
+}
+
+@media (min-width: 400px) {
+  .showcase,
+  .showcase .overlay {
+    height: calc(130vh - 0.1px);
+  }
+}
+
+@media (min-width: 768px) {
+  .showcase,
+  .showcase .overlay {
+    height: calc(110vh - 0.1px);
+  }
 }
 
 @media (min-width: 1024px) {
